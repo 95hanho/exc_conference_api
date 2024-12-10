@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="me._hanho.conference.mapper.CustomMapper">
+	<select id="getConferenceInfo">
+		SELECT *
+		FROM conference_info
+		WHERE conference_code = #{code}
+	</select>
+	<select id="getSidos">
+		SELECT *
+		FROM sido
+	</select>
+	<select id="getSigus">
+		SELECT *
+		FROM sigu
+	</select>
+</mapper>
