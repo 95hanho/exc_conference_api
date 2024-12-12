@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import me._hanho.conference.mapper.CustomMapper;
+import me._hanho.conference.model.Application;
 import me._hanho.conference.model.Conference;
 import me._hanho.conference.model.Sido;
 import me._hanho.conference.model.Sigu;
@@ -26,6 +27,10 @@ public class CustomRepository {
 
 	public List<Sigu> getSigus() {
 		return customMapper.getSigus();
+	}
+
+	public void applyConference(Application appli) {
+		customMapper.applyConference(appli);
 	}
 
 }

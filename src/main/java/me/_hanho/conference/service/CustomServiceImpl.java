@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import me._hanho.conference.model.Application;
 import me._hanho.conference.model.Conference;
 import me._hanho.conference.model.Sido;
 import me._hanho.conference.model.Sigu;
@@ -29,6 +30,11 @@ public class CustomServiceImpl implements CustomService {
 	@Override
 	public List<Sigu> getSigus() {
 		return customDAO.getSigus();
+	}
+
+	@Override
+	public void applyConference(Application appli) {
+		customDAO.applyConference(appli);
 	}
 
 }

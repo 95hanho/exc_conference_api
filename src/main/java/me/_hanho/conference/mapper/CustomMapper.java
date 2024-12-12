@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import me._hanho.conference.model.Application;
 import me._hanho.conference.model.Conference;
 import me._hanho.conference.model.Sido;
 import me._hanho.conference.model.Sigu;
@@ -16,5 +17,7 @@ public interface CustomMapper {
 	List<Sido> getSidos();
 
 	List<Sigu> getSigus();
+
+	void applyConference(Application appli);
 
 }
