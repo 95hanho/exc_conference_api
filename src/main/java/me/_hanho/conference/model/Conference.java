@@ -6,7 +6,9 @@ import java.util.List;
 public class Conference {
 
 	private List<String> conference_addition_input_info;
+	private String conference_addition_input_info_JSON;
 	private String conference_addition_input_info_value;
+	private String conference_addition_input_info_value_JSON;
 	private String conference_addition_title;
 	private String conference_background_color;
 	private String conference_code;
@@ -79,6 +81,48 @@ public class Conference {
 	}
 
 
+	public Conference(List<String> conference_addition_input_info, String conference_addition_input_info_JSON,
+			String conference_addition_input_info_value, String conference_addition_input_info_value_JSON,
+			String conference_addition_title, String conference_background_color, String conference_code,
+			String conference_cus_data_tablename, String conference_entry_fee, int conference_idx,
+			String conference_inquiry, String conference_link_url, int conference_max_num, String conference_name,
+			String conference_open_state, String conference_over_state, int conference_person_reserve_count,
+			String conference_place, String conference_proc_date_title, Date conference_proc_enddate,
+			Date conference_proc_startdate, Date conference_recv_enddate, Date conference_recv_startdate,
+			Date conference_regdate, String conference_sub_text, String conference_thumb_filename,
+			String conference_update, boolean remote_status, List<Sido> sido_area_info, List<Sigu> sigu_area_info) {
+		super();
+		this.conference_addition_input_info = conference_addition_input_info;
+		this.conference_addition_input_info_JSON = conference_addition_input_info_JSON;
+		this.conference_addition_input_info_value = conference_addition_input_info_value;
+		this.conference_addition_input_info_value_JSON = conference_addition_input_info_value_JSON;
+		this.conference_addition_title = conference_addition_title;
+		this.conference_background_color = conference_background_color;
+		this.conference_code = conference_code;
+		this.conference_cus_data_tablename = conference_cus_data_tablename;
+		this.conference_entry_fee = conference_entry_fee;
+		this.conference_idx = conference_idx;
+		this.conference_inquiry = conference_inquiry;
+		this.conference_link_url = conference_link_url;
+		this.conference_max_num = conference_max_num;
+		this.conference_name = conference_name;
+		this.conference_open_state = conference_open_state;
+		this.conference_over_state = conference_over_state;
+		this.conference_person_reserve_count = conference_person_reserve_count;
+		this.conference_place = conference_place;
+		this.conference_proc_date_title = conference_proc_date_title;
+		this.conference_proc_enddate = conference_proc_enddate;
+		this.conference_proc_startdate = conference_proc_startdate;
+		this.conference_recv_enddate = conference_recv_enddate;
+		this.conference_recv_startdate = conference_recv_startdate;
+		this.conference_regdate = conference_regdate;
+		this.conference_sub_text = conference_sub_text;
+		this.conference_thumb_filename = conference_thumb_filename;
+		this.conference_update = conference_update;
+		this.remote_status = remote_status;
+		this.sido_area_info = sido_area_info;
+		this.sigu_area_info = sigu_area_info;
+	}
 
 	public List<String> getConference_addition_input_info() {
 		return conference_addition_input_info;
@@ -303,11 +347,29 @@ public class Conference {
 	public void setSigu_area_info(List<Sigu> sigu_area_info) {
 		this.sigu_area_info = sigu_area_info;
 	}
+	
+	public String getConference_addition_input_info_JSON() {
+		return conference_addition_input_info_JSON;
+	}
+
+	public void setConference_addition_input_info_JSON(String conference_addition_input_info_JSON) {
+		this.conference_addition_input_info_JSON = conference_addition_input_info_JSON;
+	}
+
+	public String getConference_addition_input_info_value_JSON() {
+		return conference_addition_input_info_value_JSON;
+	}
+
+	public void setConference_addition_input_info_value_JSON(String conference_addition_input_info_value_JSON) {
+		this.conference_addition_input_info_value_JSON = conference_addition_input_info_value_JSON;
+	}
 
 	@Override
 	public String toString() {
 		return "Conference [conference_addition_input_info=" + conference_addition_input_info
+				+ ", conference_addition_input_info_JSON=" + conference_addition_input_info_JSON
 				+ ", conference_addition_input_info_value=" + conference_addition_input_info_value
+				+ ", conference_addition_input_info_value_JSON=" + conference_addition_input_info_value_JSON
 				+ ", conference_addition_title=" + conference_addition_title + ", conference_background_color="
 				+ conference_background_color + ", conference_code=" + conference_code
 				+ ", conference_cus_data_tablename=" + conference_cus_data_tablename + ", conference_entry_fee="
@@ -324,5 +386,5 @@ public class Conference {
 				+ conference_thumb_filename + ", conference_update=" + conference_update + ", remote_status="
 				+ remote_status + ", sido_area_info=" + sido_area_info + ", sigu_area_info=" + sigu_area_info + "]";
 	}
-	
+
 }

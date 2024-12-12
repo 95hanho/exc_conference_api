@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import me._hanho.conference.model.Admin;
 import me._hanho.conference.model.Application;
 import me._hanho.conference.model.Conference;
 import me._hanho.conference.model.Sido;
@@ -42,7 +43,6 @@ public class CustomController {
 		conference.setRemote_status(true);
 		conference.setSido_area_info(Sido_list);
 		conference.setSigu_area_info(Sigu_list);
-		conference.setConference_addition_input_info(new ArrayList<String>());
 		
 		result.put("data", conference);
 		result.put("msg", "success");
@@ -51,9 +51,11 @@ public class CustomController {
 	
 	// 컨퍼런스 관리자 설정
 	@PostMapping("/extention")
-	public ResponseEntity<Map<String, Object>> setConferenceAdmin(@RequestParam("code") String code) {
+	public ResponseEntity<Map<String, Object>> setConferenceAdmin(@ModelAttribute Admin admin) {
 		System.out.println("setConferenceAdmin");
 		Map<String, Object> result = new HashMap<String, Object>();
+		
+		customService.setConferenceAdmin(admin);
 		
 		result.put("msg", "success");
 		return new ResponseEntity<>(result, HttpStatus.OK);
@@ -67,6 +69,7 @@ public class CustomController {
 		Map<String, Object> result = new HashMap<String, Object>();
 		
 		System.out.println(file);
+		System.out.println(appli);
 		customService.applyConference(appli);
 		
 		result.put("msg", "success");

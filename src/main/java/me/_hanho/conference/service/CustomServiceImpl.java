@@ -5,11 +5,13 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import me._hanho.conference.model.Admin;
 import me._hanho.conference.model.Application;
 import me._hanho.conference.model.Conference;
 import me._hanho.conference.model.Sido;
 import me._hanho.conference.model.Sigu;
 import me._hanho.conference.repository.CustomRepository;
+import me._hanho.conference.util.JsonUtil;
 
 @Service
 public class CustomServiceImpl implements CustomService {
@@ -35,6 +37,12 @@ public class CustomServiceImpl implements CustomService {
 	@Override
 	public void applyConference(Application appli) {
 		customDAO.applyConference(appli);
+	}
+
+	@Override
+	public void setConferenceAdmin(Admin admin) {
+		admin.setConference_addition_json(JsonUtil.convertListToJson(admin.getConference_addition()));
+		customDAO.setConferenceAdmin(admin);
 	}
 
 }
