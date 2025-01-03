@@ -9,8 +9,8 @@
 		conference_over_state, 
 		(
 			SELECT COUNT(*) 
-            FROM application 
-            WHERE application.conference_id = conference_info.conference_id
+            FROM conference_application 
+            WHERE conference_application.conference_id = conference_info.conference_id
 		) AS conference_person_reserve_count, 
 		conference_proc_date_title, 
 		conference_proc_enddate, conference_proc_startdate, conference_recv_enddate, 
@@ -21,14 +21,14 @@
 	</select>
 	<select id="getSidos">
 		SELECT *
-		FROM sido
+		FROM conference_sido
 	</select>
 	<select id="getSigus">
 		SELECT *
-		FROM sigu
+		FROM conference_sigu
 	</select>
 	<insert id="applyConference">
-		INSERT INTO application(conference_id, c2gi_address, c2gi_address_detail, c2gi_company, c2gi_post, 
+		INSERT INTO conference_application(conference_id, c2gi_address, c2gi_address_detail, c2gi_company, c2gi_post, 
 		c2pi_cellphone1, c2pi_email1, c2pi_name1, c2pi_position1, privacy_check, c2pi_cashphone1, 
 		c2pi_paydate1, c2pi_paymethod1, c2pi_payname1, c2pi_proof1, c2pi_proof2, etcs, options, sido, sigungu)
 		VALUES ((SELECT conference_id FROM conference_info WHERE conference_code = #{conference_code}),
