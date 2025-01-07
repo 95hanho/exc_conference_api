@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="me._hanho.conference.mapper.CustomMapper">
+	<select id="getConferenceInfo">
+		SELECT conference_id, conference_addition_input_info AS conference_addition_input_info_JSON,
+		conference_addition_input_info_value AS conference_addition_input_info_value_JSON, 
+		conference_addition_title, conference_background_color, conference_code, conference_entry_fee, 
+		conference_inquiry, conference_max_num, conference_name, conference_open_state, 
+		conference_over_state, 
+		(
+			SELECT COUNT(*) 
+            FROM conference_application 
+            WHERE conference_application.conference_id = conference_info.conference_id
+		) AS conference_person_reserve_count, 
+		conference_proc_date_title, 
+		conference_proc_enddate, conference_proc_startdate, conference_recv_enddate, 
+		conference_recv_startdate, conference_regdate, conference_sub_text, 
+		conference_thumb_filename, conference_update
+		FROM conference_info
+		WHERE conference_code = #{code}
+	</select>
+	<select id="getSidos">
+		SELECT *
+		FROM conference_sido
+	</select>
+	<select id="getSigus">
+		SELECT *
+		FROM conference_sigu
+	</select>
+	<insert id="applyConference">
+		INSERT INTO conference_application(conference_id, c2gi_address, c2gi_address_detail, c2gi_company, c2gi_post, 
+		c2pi_cellphone1, c2pi_email1, c2pi_name1, c2pi_position1, privacy_check, c2pi_cashphone1, 
+		c2pi_paydate1, c2pi_paymethod1, c2pi_payname1, c2pi_proof1, c2pi_proof2, etcs, options, sido, sigungu)
+		VALUES ((SELECT conference_id FROM conference_info WHERE conference_code = #{conference_code}),
+		#{c2gi_address}, #{c2gi_address_detail}, #{c2gi_company}, #{c2gi_post}, #{c2pi_cellphone1}, 
+		#{c2pi_email1}, #{c2pi_name1}, #{c2pi_position1}, #{privacy_check}, #{c2pi_cashphone1},
+		 #{c2pi_paydate1}, #{c2pi_paymethod1}, #{c2pi_payname1}, #{c2pi_proof1}, #{c2pi_proof2},
+		 #{etcs_JSON}, #{options_JSON}, #{sido}, #{sigungu})
+	</insert>
+	<update id="setConferenceAdmin">
+		UPDATE conference_info
+		SET conference_addition_input_info = #{conference_addition_json},
+		conference_addition_input_info_value = #{conference_addition_value},
+		conference_background_color = #{conference_background_color},
+		conference_addition_title = #{conference_inner_title}
+		WHERE conference_code = #{conference_code}
+	</update>
+</mapper>
