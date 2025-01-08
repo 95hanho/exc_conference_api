@@ -231,3 +231,53 @@
 2025-01-07 22:39:42 [Thread-35] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9370"]
 2025-01-07 22:39:42 [Thread-35] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
 2025-01-07 22:39:42 [Thread-35] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+2025-01-08 10:18:18 [restartedMain] INFO  m._.conference.ConferenceApplication - Starting ConferenceApplication using Java 17.0.6 with PID 64408 (D:\workspace\java\my_api\project\exc_conference_api\bin\main started by EXC in D:\workspace\java\my_api\project\exc_conference_api)
+2025-01-08 10:18:18 [restartedMain] INFO  m._.conference.ConferenceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-08 10:18:18 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-08 10:18:18 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-08 10:18:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9370 (http)
+2025-01-08 10:18:19 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9370"]
+2025-01-08 10:18:19 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-08 10:18:19 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-08 10:18:19 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-08 10:18:19 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 590 ms
+2025-01-08 10:18:19 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-01-08 10:18:19 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9370"]
+2025-01-08 10:18:19 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9370 (http) with context path '/'
+2025-01-08 10:18:19 [restartedMain] INFO  m._.conference.ConferenceApplication - Started ConferenceApplication in 1.157 seconds (process running for 1.641)
+2025-01-08 10:18:24 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-01-08 10:18:24 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-08 10:18:24 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9370"]
+2025-01-08 10:18:24 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-01-08 10:18:24 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9370"]
+2025-01-08 10:45:25 [restartedMain] INFO  m._.conference.ConferenceApplication - Starting ConferenceApplication using Java 17.0.6 with PID 73828 (D:\workspace\java\my_api\project\exc_conference_api\bin\main started by EXC in D:\workspace\java\my_api\project\exc_conference_api)
+2025-01-08 10:45:25 [restartedMain] INFO  m._.conference.ConferenceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-01-08 10:45:25 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-08 10:45:25 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-08 10:45:26 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9370 (http)
+2025-01-08 10:45:26 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9370"]
+2025-01-08 10:45:26 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-01-08 10:45:26 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-08 10:45:26 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-01-08 10:45:26 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 606 ms
+2025-01-08 10:45:26 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-01-08 10:45:26 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9370"]
+2025-01-08 10:45:26 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9370 (http) with context path '/'
+2025-01-08 10:45:26 [restartedMain] INFO  m._.conference.ConferenceApplication - Started ConferenceApplication in 1.214 seconds (process running for 1.726)
+2025-01-08 10:46:21 [http-nio-9370-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-08 10:46:21 [http-nio-9370-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-01-08 10:46:21 [http-nio-9370-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-01-08 10:46:21 [http-nio-9370-exec-1] INFO  m._.c.controller.CustomController - getConference
+2025-01-08 10:46:21 [http-nio-9370-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-01-08 10:46:21 [http-nio-9370-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.mariadb.jdbc.Connection@36d6c6b2
+2025-01-08 10:46:21 [http-nio-9370-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-01-08 10:47:33 [http-nio-9370-exec-3] INFO  m._.c.controller.CustomController - getConference
+2025-01-08 10:47:36 [http-nio-9370-exec-4] INFO  m._.c.controller.CustomController - getConference
+2025-01-08 10:47:49 [http-nio-9370-exec-5] INFO  m._.c.controller.CustomController - getConference
+2025-01-08 10:52:08 [RMI TCP Connection(10)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2025-01-08 10:52:08 [RMI TCP Connection(10)-127.0.0.1] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-08 10:52:08 [tomcat-shutdown] INFO  o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-9370"]
+2025-01-08 10:52:08 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-01-08 10:52:08 [RMI TCP Connection(10)-127.0.0.1] INFO  o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-9370"]
+2025-01-08 10:52:08 [RMI TCP Connection(10)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-01-08 10:52:08 [RMI TCP Connection(10)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
