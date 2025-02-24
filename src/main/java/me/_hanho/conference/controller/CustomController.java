@@ -1,5 +1,6 @@
 package me._hanho.conference.controller;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import jakarta.servlet.http.HttpServletRequest;
 import me._hanho.conference.model.Admin;
 import me._hanho.conference.model.Application;
 import me._hanho.conference.model.Conference;
@@ -47,8 +49,6 @@ public class CustomController {
 		conference.setSido_area_info(Sido_list);
 		conference.setSigu_area_info(Sigu_list);
 		
-		System.out.println(conference);
-		
 		result.put("data", conference);
 		result.put("msg", "success");
 		return new ResponseEntity<>(result, HttpStatus.OK);
@@ -56,9 +56,21 @@ public class CustomController {
 	 
 	// 컨퍼런스 관리자 설정
 	@PostMapping("/extention")
-	public ResponseEntity<Map<String, Object>> setConferenceAdmin(@ModelAttribute Admin admin) {
+	public ResponseEntity<Map<String, Object>> setConferenceAdmin(@ModelAttribute Admin admin, HttpServletRequest request) {
 		logger.info("setConferenceAdmin");
 		Map<String, Object> result = new HashMap<String, Object>();
+		
+		String ipAddress = request.getRemoteAddr();
+		logger.info("ipAddress : " + ipAddress);
+		
+		// 허용 IP 리스트
+	    List<String> allowedIps = Arrays.asList("203.245.44.21"); // 허용할 IP를 리스트에 추가
+	    
+	    // IP 제한 체크
+	    if (!allowedIps.contains(ipAddress)) {
+	        result.put("msg", "Access denied: Unauthorized IP");
+	        return new ResponseEntity<>(result, HttpStatus.FORBIDDEN);
+	    }
 		
 		customService.setConferenceAdmin(admin);
 		
